@@ -1,5 +1,3 @@
-
-
 const TimelineItem = ({ title, date, description }) => {
   return (
     <li className="timeline-item">
@@ -8,6 +6,6 @@ const TimelineItem = ({ title, date, description }) => {
       <p className="timeline-text">{description}</p>
     </li>
   );
-}
+};
 
 export default TimelineItem;

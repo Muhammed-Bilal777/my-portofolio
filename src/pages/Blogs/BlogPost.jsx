@@ -1,11 +1,9 @@
-
-
 const BlogPost = ({ title, category, date, image, description }) => {
   return (
     <li className="blog-post-item">
       <a href="#">
         <figure className="blog-banner-box">
-          <img src={image} alt={title} loading="lazy"/>
+          <img src={image} alt={title} loading="lazy" />
         </figure>
         <div className="blog-content">
           <div className="blog-meta">
@@ -19,6 +17,6 @@ const BlogPost = ({ title, category, date, image, description }) => {
       </a>
     </li>
   );
-}
+};
 
 export default BlogPost;

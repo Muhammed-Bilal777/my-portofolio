@@ -1,6 +1,4 @@
-
 [
-
   {
     "name": "Mudasssira",
     "avatar": "/images/avatar-3.png",
@@ -11,15 +9,14 @@
     "avatar": "/images/avatar-4.png",
     "testimonial": "Bilal has a lot of experience and is very concerned about the needs of the client."
   },
-    {
-      "name": "Muneer ahmed",
-      "avatar": "/images/avatar-1.png",
-      "testimonial": "Bilal was hired to create a user-freindly website using Reactjs. We were very pleased with the work done."
-    },
-    {
-      "name": "Sarika shetty",
-      "avatar": "/images/avatar-2.png",
-      "testimonial": "Bilal was hired to create a  website using wordpress. He delivered with all the requirements within time."
-    }
-  ]
-  
+  {
+    "name": "Muneer ahmed",
+    "avatar": "/images/avatar-1.png",
+    "testimonial": "Bilal was hired to create a user-freindly website using Reactjs. We were very pleased with the work done."
+  },
+  {
+    "name": "Sarika shetty",
+    "avatar": "/images/avatar-2.png",
+    "testimonial": "Bilal was hired to create a  website using wordpress. He delivered with all the requirements within time."
+  }
+]

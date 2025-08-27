@@ -1,4 +1,4 @@
-import  { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { FaRegEye } from 'react-icons/fa';
 
 const Portfolio = () => {
@@ -12,14 +12,13 @@ const Portfolio = () => {
   // Load project data from projects.json
   useEffect(() => {
     fetch('/projects.json')
-      .then(response => response.json())
-      .then(data => {
+      .then((response) => response.json())
+      .then((data) => {
         setProjects(data);
         setFilteredProjects(data);
       })
-      .catch(error => console.error('Error loading project data:', error));
+      .catch((error) => console.error('Error loading project data:', error));
   }, []);
-
 
   // Function to handle category filter selection
   const handleFilterClick = (category) => {
@@ -27,37 +26,41 @@ const Portfolio = () => {
     if (category === 'All') {
       setFilteredProjects(projects);
     } else {
-      const filtered = projects.filter(project => project.category === category);
+      const filtered = projects.filter(
+        (project) => project.category === category
+      );
       setFilteredProjects(filtered);
     }
   };
-  useEffect(()=>{window.scroll(0,0)},[])
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
 
   return (
     <section className="portfolio" data-page="portfolio">
       <header>
         <h2 className="h2 article-title">Portfolio</h2>
       </header>
-
       {/* Filter buttons */}
       <ul className="filter-list">
-        {['All', 'Front-End Development', 'Back-End Development', 'Others'].map(category => (
-          <li className="filter-item" key={category}>
-            <button
-              className={category === selectedCategory ? 'active' : ''}
-              onClick={() => handleFilterClick(category)}
-              data-filter-btn
-            >
-              {category}
-            </button>
-          </li>
-        ))}
+        {['All', 'Front-End Development', 'Back-End Development', 'Others'].map(
+          (category) => (
+            <li className="filter-item" key={category}>
+              <button
+                className={category === selectedCategory ? 'active' : ''}
+                onClick={() => handleFilterClick(category)}
+                data-filter-btn
+              >
+                {category}
+              </button>
+            </li>
+          )
+        )}
       </ul>
-
       {/* Portfolio items */}
       <section className="projects">
         <ul className="project-list">
-          {filteredProjects.map(project => (
+          {filteredProjects.map((project) => (
             <li
               className="project-item active"
               data-filter-item
