@@ -5,19 +5,27 @@ on:
     branches: [main]
 
 jobs:
-  Build:
+  build:
     runs-on: ubuntu-latest
+
     steps:
-      - name: checkout code
+      - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: setup nodejs
-        uses: actions/node-setup@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: npm  
 
-      - name: install dependencies
-        run: npm install
+      - name: Install dependencies
+        run: npm ci  
+
+      - name: Run Lint
+        run: npm run lint --if-present
+
+      - name: Run Tests
+        run: npm test --if-present
 
       - name: Build
         run: npm run build
