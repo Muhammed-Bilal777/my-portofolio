@@ -1,0 +1,26 @@
+name : CI-CD Pipeline
+
+on: 
+ pull_request:
+   branches : [master]
+
+jobs:
+  Build:
+   runs-on : ubuntu-latest
+   steps:
+   
+   - name: checkout code
+     uses: actions/checkout@v4
+
+   - name: setup nodejs
+     uses: actions/node-setup@v4
+     with:
+      node-version: 20
+
+   - name: install dependencies
+     run: npm install
+
+   - name: Build
+     run: npm run build
+
+     

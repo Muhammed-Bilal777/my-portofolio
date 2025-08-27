@@ -44,12 +44,14 @@ const About = () => {
     <header>
       <h2 className="h2 article-title">About me</h2>
     </header>
-
+   
     <section className="about-text">
       <p>
-      Highly skilled MERN Stack developer bringing 2 years of experience in designing and developing
-      robust web applications. Proficient in front-end and back-end technologies, including React.js,
-Node.js, MongoDB, and Express.js. 
+    Highly skilled MERN stack developer bringing 3+ years of experience in designing and developing robust web applications.
+ Proficient in front-end and back-end technologies, including React.js, Node.js, MongoDB, and Express.js. Strong
+ understanding of responsive design principles and cross-browser compatibility. Proven ability to meet tight deadlines and
+ deliver high-quality code. A collaborative team player, dedicated to ensuring seamless user experiences and designing
+ scalable solutions.
 
       </p>
 
